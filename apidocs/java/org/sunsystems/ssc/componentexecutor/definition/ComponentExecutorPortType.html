@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <meta name="description" content="Documentation for Mule SunSystemsSSC Anypoint Connector." />
+
+<link rel="shortcut icon" type="image/x-icon" href="../../../../../../favicon.ico" />
+<title>
+
+  ComponentExecutorPortType
+
+
+| Mule SunSystemsSSC Anypoint Connector
+
+</title>
+<link href="../../../../../../assets/mule-developer-docs.css" rel="stylesheet" type="text/css" />
+<link href="../../../../../../assets/mule-developer-prettify.css" rel="stylesheet" type="text/css" />
+<link href="../../../../../../assets/customizations.css" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
+<script src="../../../../../../assets/search_autocomplete.js" type="text/javascript"></script>
+<script src="../../../../../../assets/jquery-resizable.min.js" type="text/javascript"></script>
+<script src="../../../../../../assets/jquery-toc.js" type="text/javascript"></script>
+<script src="../../../../../../assets/mule-developer-docs.js" type="text/javascript"></script>
+<script src="../../../../../../assets/prettify.js" type="text/javascript"></script>
+<script type="text/javascript">
+  setToRoot("../../../../../../", "../../../../../../assets/");
+</script>
+<script src="../../../../../../assets/mule-developer-reference.js" type="text/javascript"></script>
+<script src="../../../../../../assets/navtree_data.js" type="text/javascript"></script>
+<script src="../../../../../../assets/customizations.js" type="text/javascript"></script>
+<noscript>
+  <style type="text/css">
+    html,body{overflow:auto;}
+    #body-content{position:relative; top:0;}
+    #doc-content{overflow:visible;border-left:3px solid #666;}
+    #side-nav{padding:0;}
+    #side-nav .toggle-list ul {display:block;}
+    #resize-packages-nav{border-bottom:3px solid #666;}
+  </style>
+</noscript>
+<script type="text/javascript" charset="utf-8">
+  var is_ssl = ("https:" == document.location.protocol);
+  var asset_host = is_ssl ? "https://s3.amazonaws.com/getsatisfaction.com/" : "http://s3.amazonaws.com/getsatisfaction.com/";
+  document.write(unescape("%3Cscript src='" + asset_host + "javascripts/feedback-v2.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript" charset="utf-8">
+  var feedback_widget_options = {};
+
+  feedback_widget_options.display = "overlay";
+  feedback_widget_options.company = "mulesoft";
+  feedback_widget_options.placement = "right";
+  feedback_widget_options.color = "#2F74AE";
+  feedback_widget_options.style = "question";
+
+  feedback_widget_options.tag = "Mule SunSystemsSSC Anypoint Connector";
+
+  feedback_widget_options.limit = "3";
+
+  var feedback_widget = new GSFN.feedback_widget(feedback_widget_options);
+</script>
+</head>
+
+<body class="">
+
+<div id="header">
+    <div id="headerLeft">
+    
+      <span id="masthead-title">Mule SunSystemsSSC Anypoint Connector</span>
+    
+    <ul id="header-tabs" class="">
+    
+    	<li id="guide"><a href="../../../../../../guide/install.html">
+	    	<span class="en">Install Guide</span>
+    	</a></li>
+    
+    	<li id="java"><a href="../../../../../../java/packages.html">
+	    	<span class="en">Java API Reference</span>
+    	</a></li>
+    
+    	<li id="mule"><a href="../../../../../../mule/modules.html">
+	    	<span class="en">Mule API Reference</span>
+    	</a></li>
+    
+    </ul>
+    </div>
+    <div id="headerRight">
+      <a href="http://www.mulesoft.com" tabindex="-1">
+      <img src="../../../../../../assets//images/mulesoft-logo-final.gif" alt="MuleSoft" border="0" id="mulesoftlogo"></a><br/>
+      
+  <div id="searchContainer" >
+      <div id="searchForm">
+          <form accept-charset="utf-8" class="gsc-search-box" 
+                onsubmit="return submit_search()">
+            <table class="gsc-search-box" cellpadding="0" cellspacing="0"><tbody>
+                <tr>
+                  <td class="gsc-input">
+                    <input id="search_autocomplete" class="gsc-input" type="text" size="33" autocomplete="off"
+                      title="search developer docs" name="q"
+                      value="search developer docs"
+                      onFocus="search_focus_changed(this, true)"
+                      onBlur="search_focus_changed(this, false)"
+                      onkeydown="return search_changed(event, true, '../../../../../../')"
+                      onkeyup="return search_changed(event, false, '../../../../../../')" />
+                  <div id="search_filtered_div" class="no-display">
+                      <table id="search_filtered" cellspacing=0>
+                      </table>
+                  </div>
+                  </td>
+                  <td class="gsc-search-button">
+                    <input type="submit" value="Search" title="search" id="search-button" class="gsc-search-button" />
+                  </td>
+                  <td class="gsc-clear-button">
+                    <div title="clear results" class="gsc-clear-button">&nbsp;</div>
+                  </td>
+                </tr></tbody>
+              </table>
+          </form>
+      </div><!-- searchForm -->
+  </div><!-- search -->
+      
+    </div>
+</div><!-- header -->
+
+
+  <div class="g-section g-tpl-240" id="body-content">
+    <div class="g-unit g-first side-nav-resizable" id="side-nav">
+      <div id="swapper">
+        <div id="nav-panels">
+          <div id="resize-packages-nav">
+            <div id="packages-nav">
+              <div id="index-links">
+                <a href="../../../../../../java/packages.html"  >Package Index</a> |
+                <a href="../../../../../../java/classes.html" >Class Index</a>
+              </div>
+              <ul>
+                
+    <li class="api apilevel-">
+  <a href="../../../../../../java/com/computime/sunsystemsssc/package-summary.html">com.computime.sunsystemsssc</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/com/computime/sunsystemsssc/adapter/package-summary.html">com.computime.sunsystemsssc.adapter</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/com/computime/sunsystemsssc/adapters/package-summary.html">com.computime.sunsystemsssc.adapters</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/com/computime/sunsystemsssc/agents/package-summary.html">com.computime.sunsystemsssc.agents</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/com/computime/sunsystemsssc/config/package-summary.html">com.computime.sunsystemsssc.config</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/com/computime/sunsystemsssc/connectivity/package-summary.html">com.computime.sunsystemsssc.connectivity</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/com/computime/sunsystemsssc/devkit/package-summary.html">com.computime.sunsystemsssc.devkit</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/com/computime/sunsystemsssc/model/package-summary.html">com.computime.sunsystemsssc.model</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/com/computime/sunsystemsssc/pooling/package-summary.html">com.computime.sunsystemsssc.pooling</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/com/computime/sunsystemsssc/processors/package-summary.html">com.computime.sunsystemsssc.processors</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/com/computime/transformer/package-summary.html">com.computime.transformer</a></li>
+    <li class="selected api apilevel-">
+  <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/package-summary.html">org.sunsystems.ssc.componentexecutor.definition</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/sunsystems/ssc/securityprovider/definition/package-summary.html">org.sunsystems.ssc.securityprovider.definition</a></li>
+              </ul><br/>
+            </div> <!-- end packages -->
+          </div> <!-- end resize-packages -->
+          <div id="classes-nav">
+            <ul>
+              
+    <li><h2>Interfaces</h2>
+      <ul>
+          <li class="selected api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorPortType.html">ComponentExecutorPortType</a></li>
+      </ul>
+    </li>
+              
+    <li><h2>Classes</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ArrayOfString.html">ArrayOfString</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutor.html">ComponentExecutor</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorComponentsRequest.html">ComponentExecutorComponentsRequest</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorComponentsResponse.html">ComponentExecutorComponentsResponse</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorExecuteRequest.html">ComponentExecutorExecuteRequest</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorExecuteResponse.html">ComponentExecutorExecuteResponse</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetConfigurationKeyRequest.html">ComponentExecutorgetConfigurationKeyRequest</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetConfigurationKeyResponse.html">ComponentExecutorgetConfigurationKeyResponse</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetLocaleRequest.html">ComponentExecutorgetLocaleRequest</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetLocaleResponse.html">ComponentExecutorgetLocaleResponse</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorInputSchemaRequest.html">ComponentExecutorInputSchemaRequest</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorInputSchemaResponse.html">ComponentExecutorInputSchemaResponse</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorMethodsRequest.html">ComponentExecutorMethodsRequest</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorMethodsResponse.html">ComponentExecutorMethodsResponse</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorOutputSchemaRequest.html">ComponentExecutorOutputSchemaRequest</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorOutputSchemaResponse.html">ComponentExecutorOutputSchemaResponse</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorStreamExecuteRequest.html">ComponentExecutorStreamExecuteRequest</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorStreamExecuteResponse.html">ComponentExecutorStreamExecuteResponse</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorUpdateOperatorLogonDateRequest.html">ComponentExecutorUpdateOperatorLogonDateRequest</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorUpdateOperatorLogonDateResponse.html">ComponentExecutorUpdateOperatorLogonDateResponse</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ConfigurationKey.html">ConfigurationKey</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ConfigurationType.html">ConfigurationType</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/Enum.html">Enum</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/IAuthenticationVoucher.html">IAuthenticationVoucher</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ILicensingVoucher.html">ILicensingVoucher</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/IMethod.html">IMethod</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/Locale.html">Locale</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html">ObjectFactory</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ServerArguments.html">ServerArguments</a></li>
+      </ul>
+    </li>
+              
+              
+              
+              
+            </ul><br/>
+          </div><!-- end classes -->
+        </div><!-- end nav-panels -->
+        <div id="nav-tree" style="display:none">
+          <div id="index-links">
+            <a href="../../../../../../packages.html"  >Package Index</a> | 
+            <a href="../../../../../../classes.html" >Class Index</a>
+          </div>
+        </div><!-- end nav-tree -->
+      </div><!-- end swapper -->
+    </div> <!-- end side-nav -->
+    <script>
+      if (!isMobile) {
+        $("<a href='#' id='nav-swap' onclick='swapNav();return false;' style='font-size:10px;line-height:9px;margin-left:1em;text-decoration:none;'><span id='tree-link'>Use Tree Navigation</span><span id='panel-link' style='display:none'>Use Panel Navigation</span></a>").appendTo("#side-nav");
+        chooseDefaultNav();
+        if ($("#nav-tree").is(':visible')) {
+          init_default_navtree("../../../../../../");
+        } else {
+          addLoadEvent(function() {
+            scrollIntoView("packages-nav");
+            scrollIntoView("classes-nav");
+          });
+        }
+        $("#swapper").css({borderBottom:"2px solid #aaa"});
+      } else {
+        swapNav(); // tree view should be used on mobile
+      }
+    </script>
+
+
+
+<div class="g-unit" id="doc-content">
+
+<div id="api-info-block">
+
+
+
+
+<div class="sum-details-links">
+
+
+</div><!-- end sum-details-links -->
+<div class="api-level">
+  
+
+
+  
+  
+
+</div>
+</div><!-- end api-info-block -->
+
+
+<!-- ======== START OF CLASS DATA ======== -->
+
+<div id="jd-header">
+    public
+     
+     
+    
+    interface
+<h1>ComponentExecutorPortType</h1>
+
+
+
+  
+  
+  
+
+
+</div><!-- end header -->
+
+<div id="naMessage"></div>
+
+<div id="jd-content" class="api apilevel-">
+<table class="jd-inheritance-table">
+
+
+    <tr>
+        
+        <td colspan="1" class="jd-inheritance-class-cell">org.sunsystems.ssc.componentexecutor.definition.ComponentExecutorPortType</td>
+    </tr>
+    
+
+</table>
+
+
+
+
+
+
+
+<div class="jd-descr">
+
+
+<h2>Class Overview</h2>
+<p>This class was generated by Apache CXF 2.5.1
+ 2015-05-18T14:58:32.371+02:00
+ Generated source version: 2.5.1
+ 
+</p>
+
+
+
+
+
+</div><!-- jd-descr -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="jd-descr">
+
+
+<h2>Summary</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="pubmethods" class="jd-sumtable"><tr><th colspan="12">Public Methods</th></tr>
+
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorComponentsResponse.html">ComponentExecutorComponentsResponse</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorPortType.html#components(org.sunsystems.ssc.componentexecutor.definition.ComponentExecutorComponentsRequest)">components</a></span>(<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorComponentsRequest.html">ComponentExecutorComponentsRequest</a> parameters)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorExecuteResponse.html">ComponentExecutorExecuteResponse</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorPortType.html#execute(org.sunsystems.ssc.componentexecutor.definition.ComponentExecutorExecuteRequest)">execute</a></span>(<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorExecuteRequest.html">ComponentExecutorExecuteRequest</a> parameters)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetConfigurationKeyResponse.html">ComponentExecutorgetConfigurationKeyResponse</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorPortType.html#getConfigurationKey(org.sunsystems.ssc.componentexecutor.definition.ComponentExecutorgetConfigurationKeyRequest)">getConfigurationKey</a></span>(<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetConfigurationKeyRequest.html">ComponentExecutorgetConfigurationKeyRequest</a> parameters)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetLocaleResponse.html">ComponentExecutorgetLocaleResponse</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorPortType.html#getLocale(org.sunsystems.ssc.componentexecutor.definition.ComponentExecutorgetLocaleRequest)">getLocale</a></span>(<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetLocaleRequest.html">ComponentExecutorgetLocaleRequest</a> parameters)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorInputSchemaResponse.html">ComponentExecutorInputSchemaResponse</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorPortType.html#inputSchema(org.sunsystems.ssc.componentexecutor.definition.ComponentExecutorInputSchemaRequest)">inputSchema</a></span>(<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorInputSchemaRequest.html">ComponentExecutorInputSchemaRequest</a> parameters)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorMethodsResponse.html">ComponentExecutorMethodsResponse</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorPortType.html#methods(org.sunsystems.ssc.componentexecutor.definition.ComponentExecutorMethodsRequest)">methods</a></span>(<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorMethodsRequest.html">ComponentExecutorMethodsRequest</a> parameters)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorOutputSchemaResponse.html">ComponentExecutorOutputSchemaResponse</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorPortType.html#outputSchema(org.sunsystems.ssc.componentexecutor.definition.ComponentExecutorOutputSchemaRequest)">outputSchema</a></span>(<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorOutputSchemaRequest.html">ComponentExecutorOutputSchemaRequest</a> parameters)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorStreamExecuteResponse.html">ComponentExecutorStreamExecuteResponse</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorPortType.html#streamExecute(org.sunsystems.ssc.componentexecutor.definition.ComponentExecutorStreamExecuteRequest)">streamExecute</a></span>(<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorStreamExecuteRequest.html">ComponentExecutorStreamExecuteRequest</a> parameters)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorUpdateOperatorLogonDateResponse.html">ComponentExecutorUpdateOperatorLogonDateResponse</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorPortType.html#updateOperatorLogonDate(org.sunsystems.ssc.componentexecutor.definition.ComponentExecutorUpdateOperatorLogonDateRequest)">updateOperatorLogonDate</a></span>(<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorUpdateOperatorLogonDateRequest.html">ComponentExecutorUpdateOperatorLogonDateRequest</a> parameters)</nobr>
+        
+  </td></tr>
+
+
+
+</table>
+
+
+
+
+
+
+
+</div><!-- jd-descr (summary) -->
+
+<!-- Details -->
+
+
+
+
+
+
+
+
+<!-- XML Attributes -->
+
+
+<!-- Enum Values -->
+
+
+<!-- Constants -->
+
+
+<!-- Fields -->
+
+
+<!-- Public ctors -->
+
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<!-- Protected ctors -->
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+<!-- Public methdos -->
+
+<h2>Public Methods</h2>
+
+
+
+<A NAME="components(org.sunsystems.ssc.componentexecutor.definition.ComponentExecutorComponentsRequest)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorComponentsResponse.html">ComponentExecutorComponentsResponse</a>
+      </span>
+      <span class="sympad">components</span>
+      <span class="normal">(<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorComponentsRequest.html">ComponentExecutorComponentsRequest</a> parameters)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>parameters</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="execute(org.sunsystems.ssc.componentexecutor.definition.ComponentExecutorExecuteRequest)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorExecuteResponse.html">ComponentExecutorExecuteResponse</a>
+      </span>
+      <span class="sympad">execute</span>
+      <span class="normal">(<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorExecuteRequest.html">ComponentExecutorExecuteRequest</a> parameters)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>parameters</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getConfigurationKey(org.sunsystems.ssc.componentexecutor.definition.ComponentExecutorgetConfigurationKeyRequest)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetConfigurationKeyResponse.html">ComponentExecutorgetConfigurationKeyResponse</a>
+      </span>
+      <span class="sympad">getConfigurationKey</span>
+      <span class="normal">(<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetConfigurationKeyRequest.html">ComponentExecutorgetConfigurationKeyRequest</a> parameters)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>parameters</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getLocale(org.sunsystems.ssc.componentexecutor.definition.ComponentExecutorgetLocaleRequest)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetLocaleResponse.html">ComponentExecutorgetLocaleResponse</a>
+      </span>
+      <span class="sympad">getLocale</span>
+      <span class="normal">(<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetLocaleRequest.html">ComponentExecutorgetLocaleRequest</a> parameters)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>parameters</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="inputSchema(org.sunsystems.ssc.componentexecutor.definition.ComponentExecutorInputSchemaRequest)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorInputSchemaResponse.html">ComponentExecutorInputSchemaResponse</a>
+      </span>
+      <span class="sympad">inputSchema</span>
+      <span class="normal">(<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorInputSchemaRequest.html">ComponentExecutorInputSchemaRequest</a> parameters)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>parameters</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="methods(org.sunsystems.ssc.componentexecutor.definition.ComponentExecutorMethodsRequest)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorMethodsResponse.html">ComponentExecutorMethodsResponse</a>
+      </span>
+      <span class="sympad">methods</span>
+      <span class="normal">(<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorMethodsRequest.html">ComponentExecutorMethodsRequest</a> parameters)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>parameters</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="outputSchema(org.sunsystems.ssc.componentexecutor.definition.ComponentExecutorOutputSchemaRequest)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorOutputSchemaResponse.html">ComponentExecutorOutputSchemaResponse</a>
+      </span>
+      <span class="sympad">outputSchema</span>
+      <span class="normal">(<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorOutputSchemaRequest.html">ComponentExecutorOutputSchemaRequest</a> parameters)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>parameters</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="streamExecute(org.sunsystems.ssc.componentexecutor.definition.ComponentExecutorStreamExecuteRequest)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorStreamExecuteResponse.html">ComponentExecutorStreamExecuteResponse</a>
+      </span>
+      <span class="sympad">streamExecute</span>
+      <span class="normal">(<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorStreamExecuteRequest.html">ComponentExecutorStreamExecuteRequest</a> parameters)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>parameters</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="updateOperatorLogonDate(org.sunsystems.ssc.componentexecutor.definition.ComponentExecutorUpdateOperatorLogonDateRequest)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorUpdateOperatorLogonDateResponse.html">ComponentExecutorUpdateOperatorLogonDateResponse</a>
+      </span>
+      <span class="sympad">updateOperatorLogonDate</span>
+      <span class="normal">(<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorUpdateOperatorLogonDateRequest.html">ComponentExecutorUpdateOperatorLogonDateRequest</a> parameters)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>parameters</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+
+
+
+<!-- ========= END OF CLASS DATA ========= -->
+<A NAME="navbar_top"></A>
+
+<div id="footer">
+Generated by <a href="http://www.mulesoft.com/devkit">Mule DevKit</a>. Document generation technology based on <a href="http://code.google.com/p/doclava/">Google's Doclava</a>.
+</div> <!-- end footer -->
+
+</div> <!-- jd-content -->
+
+</div><!-- end doc-content -->
+
+</div> <!-- end body-content --> 
+
+<script type="text/javascript">
+init(); /* initialize mule-developer-docs.js */
+</script>
+
+</body>
+</html>

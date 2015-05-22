@@ -1,0 +1,3779 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <meta name="description" content="Documentation for Mule SunSystemsSSC Anypoint Connector." />
+
+<link rel="shortcut icon" type="image/x-icon" href="../../../../../../favicon.ico" />
+<title>
+
+  ObjectFactory
+
+
+| Mule SunSystemsSSC Anypoint Connector
+
+</title>
+<link href="../../../../../../assets/mule-developer-docs.css" rel="stylesheet" type="text/css" />
+<link href="../../../../../../assets/mule-developer-prettify.css" rel="stylesheet" type="text/css" />
+<link href="../../../../../../assets/customizations.css" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
+<script src="../../../../../../assets/search_autocomplete.js" type="text/javascript"></script>
+<script src="../../../../../../assets/jquery-resizable.min.js" type="text/javascript"></script>
+<script src="../../../../../../assets/jquery-toc.js" type="text/javascript"></script>
+<script src="../../../../../../assets/mule-developer-docs.js" type="text/javascript"></script>
+<script src="../../../../../../assets/prettify.js" type="text/javascript"></script>
+<script type="text/javascript">
+  setToRoot("../../../../../../", "../../../../../../assets/");
+</script>
+<script src="../../../../../../assets/mule-developer-reference.js" type="text/javascript"></script>
+<script src="../../../../../../assets/navtree_data.js" type="text/javascript"></script>
+<script src="../../../../../../assets/customizations.js" type="text/javascript"></script>
+<noscript>
+  <style type="text/css">
+    html,body{overflow:auto;}
+    #body-content{position:relative; top:0;}
+    #doc-content{overflow:visible;border-left:3px solid #666;}
+    #side-nav{padding:0;}
+    #side-nav .toggle-list ul {display:block;}
+    #resize-packages-nav{border-bottom:3px solid #666;}
+  </style>
+</noscript>
+<script type="text/javascript" charset="utf-8">
+  var is_ssl = ("https:" == document.location.protocol);
+  var asset_host = is_ssl ? "https://s3.amazonaws.com/getsatisfaction.com/" : "http://s3.amazonaws.com/getsatisfaction.com/";
+  document.write(unescape("%3Cscript src='" + asset_host + "javascripts/feedback-v2.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript" charset="utf-8">
+  var feedback_widget_options = {};
+
+  feedback_widget_options.display = "overlay";
+  feedback_widget_options.company = "mulesoft";
+  feedback_widget_options.placement = "right";
+  feedback_widget_options.color = "#2F74AE";
+  feedback_widget_options.style = "question";
+
+  feedback_widget_options.tag = "Mule SunSystemsSSC Anypoint Connector";
+
+  feedback_widget_options.limit = "3";
+
+  var feedback_widget = new GSFN.feedback_widget(feedback_widget_options);
+</script>
+</head>
+
+<body class="">
+
+<div id="header">
+    <div id="headerLeft">
+    
+      <span id="masthead-title">Mule SunSystemsSSC Anypoint Connector</span>
+    
+    <ul id="header-tabs" class="">
+    
+    	<li id="guide"><a href="../../../../../../guide/install.html">
+	    	<span class="en">Install Guide</span>
+    	</a></li>
+    
+    	<li id="java"><a href="../../../../../../java/packages.html">
+	    	<span class="en">Java API Reference</span>
+    	</a></li>
+    
+    	<li id="mule"><a href="../../../../../../mule/modules.html">
+	    	<span class="en">Mule API Reference</span>
+    	</a></li>
+    
+    </ul>
+    </div>
+    <div id="headerRight">
+      <a href="http://www.mulesoft.com" tabindex="-1">
+      <img src="../../../../../../assets//images/mulesoft-logo-final.gif" alt="MuleSoft" border="0" id="mulesoftlogo"></a><br/>
+      
+  <div id="searchContainer" >
+      <div id="searchForm">
+          <form accept-charset="utf-8" class="gsc-search-box" 
+                onsubmit="return submit_search()">
+            <table class="gsc-search-box" cellpadding="0" cellspacing="0"><tbody>
+                <tr>
+                  <td class="gsc-input">
+                    <input id="search_autocomplete" class="gsc-input" type="text" size="33" autocomplete="off"
+                      title="search developer docs" name="q"
+                      value="search developer docs"
+                      onFocus="search_focus_changed(this, true)"
+                      onBlur="search_focus_changed(this, false)"
+                      onkeydown="return search_changed(event, true, '../../../../../../')"
+                      onkeyup="return search_changed(event, false, '../../../../../../')" />
+                  <div id="search_filtered_div" class="no-display">
+                      <table id="search_filtered" cellspacing=0>
+                      </table>
+                  </div>
+                  </td>
+                  <td class="gsc-search-button">
+                    <input type="submit" value="Search" title="search" id="search-button" class="gsc-search-button" />
+                  </td>
+                  <td class="gsc-clear-button">
+                    <div title="clear results" class="gsc-clear-button">&nbsp;</div>
+                  </td>
+                </tr></tbody>
+              </table>
+          </form>
+      </div><!-- searchForm -->
+  </div><!-- search -->
+      
+    </div>
+</div><!-- header -->
+
+
+  <div class="g-section g-tpl-240" id="body-content">
+    <div class="g-unit g-first side-nav-resizable" id="side-nav">
+      <div id="swapper">
+        <div id="nav-panels">
+          <div id="resize-packages-nav">
+            <div id="packages-nav">
+              <div id="index-links">
+                <a href="../../../../../../java/packages.html"  >Package Index</a> |
+                <a href="../../../../../../java/classes.html" >Class Index</a>
+              </div>
+              <ul>
+                
+    <li class="api apilevel-">
+  <a href="../../../../../../java/com/computime/sunsystemsssc/package-summary.html">com.computime.sunsystemsssc</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/com/computime/sunsystemsssc/adapter/package-summary.html">com.computime.sunsystemsssc.adapter</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/com/computime/sunsystemsssc/adapters/package-summary.html">com.computime.sunsystemsssc.adapters</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/com/computime/sunsystemsssc/agents/package-summary.html">com.computime.sunsystemsssc.agents</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/com/computime/sunsystemsssc/config/package-summary.html">com.computime.sunsystemsssc.config</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/com/computime/sunsystemsssc/connectivity/package-summary.html">com.computime.sunsystemsssc.connectivity</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/com/computime/sunsystemsssc/devkit/package-summary.html">com.computime.sunsystemsssc.devkit</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/com/computime/sunsystemsssc/model/package-summary.html">com.computime.sunsystemsssc.model</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/com/computime/sunsystemsssc/pooling/package-summary.html">com.computime.sunsystemsssc.pooling</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/com/computime/sunsystemsssc/processors/package-summary.html">com.computime.sunsystemsssc.processors</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/com/computime/transformer/package-summary.html">com.computime.transformer</a></li>
+    <li class="selected api apilevel-">
+  <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/package-summary.html">org.sunsystems.ssc.componentexecutor.definition</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../java/org/sunsystems/ssc/securityprovider/definition/package-summary.html">org.sunsystems.ssc.securityprovider.definition</a></li>
+              </ul><br/>
+            </div> <!-- end packages -->
+          </div> <!-- end resize-packages -->
+          <div id="classes-nav">
+            <ul>
+              
+    <li><h2>Interfaces</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorPortType.html">ComponentExecutorPortType</a></li>
+      </ul>
+    </li>
+              
+    <li><h2>Classes</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ArrayOfString.html">ArrayOfString</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutor.html">ComponentExecutor</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorComponentsRequest.html">ComponentExecutorComponentsRequest</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorComponentsResponse.html">ComponentExecutorComponentsResponse</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorExecuteRequest.html">ComponentExecutorExecuteRequest</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorExecuteResponse.html">ComponentExecutorExecuteResponse</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetConfigurationKeyRequest.html">ComponentExecutorgetConfigurationKeyRequest</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetConfigurationKeyResponse.html">ComponentExecutorgetConfigurationKeyResponse</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetLocaleRequest.html">ComponentExecutorgetLocaleRequest</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetLocaleResponse.html">ComponentExecutorgetLocaleResponse</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorInputSchemaRequest.html">ComponentExecutorInputSchemaRequest</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorInputSchemaResponse.html">ComponentExecutorInputSchemaResponse</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorMethodsRequest.html">ComponentExecutorMethodsRequest</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorMethodsResponse.html">ComponentExecutorMethodsResponse</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorOutputSchemaRequest.html">ComponentExecutorOutputSchemaRequest</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorOutputSchemaResponse.html">ComponentExecutorOutputSchemaResponse</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorStreamExecuteRequest.html">ComponentExecutorStreamExecuteRequest</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorStreamExecuteResponse.html">ComponentExecutorStreamExecuteResponse</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorUpdateOperatorLogonDateRequest.html">ComponentExecutorUpdateOperatorLogonDateRequest</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorUpdateOperatorLogonDateResponse.html">ComponentExecutorUpdateOperatorLogonDateResponse</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ConfigurationKey.html">ConfigurationKey</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ConfigurationType.html">ConfigurationType</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/Enum.html">Enum</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/IAuthenticationVoucher.html">IAuthenticationVoucher</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ILicensingVoucher.html">ILicensingVoucher</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/IMethod.html">IMethod</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/Locale.html">Locale</a></li>
+          <li class="selected api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html">ObjectFactory</a></li>
+          <li class="api apilevel-"><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ServerArguments.html">ServerArguments</a></li>
+      </ul>
+    </li>
+              
+              
+              
+              
+            </ul><br/>
+          </div><!-- end classes -->
+        </div><!-- end nav-panels -->
+        <div id="nav-tree" style="display:none">
+          <div id="index-links">
+            <a href="../../../../../../packages.html"  >Package Index</a> | 
+            <a href="../../../../../../classes.html" >Class Index</a>
+          </div>
+        </div><!-- end nav-tree -->
+      </div><!-- end swapper -->
+    </div> <!-- end side-nav -->
+    <script>
+      if (!isMobile) {
+        $("<a href='#' id='nav-swap' onclick='swapNav();return false;' style='font-size:10px;line-height:9px;margin-left:1em;text-decoration:none;'><span id='tree-link'>Use Tree Navigation</span><span id='panel-link' style='display:none'>Use Panel Navigation</span></a>").appendTo("#side-nav");
+        chooseDefaultNav();
+        if ($("#nav-tree").is(':visible')) {
+          init_default_navtree("../../../../../../");
+        } else {
+          addLoadEvent(function() {
+            scrollIntoView("packages-nav");
+            scrollIntoView("classes-nav");
+          });
+        }
+        $("#swapper").css({borderBottom:"2px solid #aaa"});
+      } else {
+        swapNav(); // tree view should be used on mobile
+      }
+    </script>
+
+
+
+<div class="g-unit" id="doc-content">
+
+<div id="api-info-block">
+
+
+
+  
+   
+  
+  
+  
+  
+
+
+<div class="sum-details-links">
+
+
+Summary:
+
+
+
+
+
+
+
+  <a href="#lfields">Fields</a>
+  
+
+
+
+  &#124; <a href="#pubctors">Ctors</a>
+  
+
+
+
+  &#124; <a href="#pubmethods">Methods</a>
+  
+
+
+
+  &#124; <a href="#inhmethods">Inherited Methods</a>
+
+&#124; <a href="#" onclick="return toggleAllClassInherited()" id="toggleAllClassInherited">[Expand All]</a>
+
+</div><!-- end sum-details-links -->
+<div class="api-level">
+  
+
+
+  
+  
+
+</div>
+</div><!-- end api-info-block -->
+
+
+<!-- ======== START OF CLASS DATA ======== -->
+
+<div id="jd-header">
+    public
+     
+     
+    
+    class
+<h1>ObjectFactory</h1>
+
+
+
+  
+    extends <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a><br/>
+  
+  
+  
+
+  
+  
+  
+
+
+</div><!-- end header -->
+
+<div id="naMessage"></div>
+
+<div id="jd-content" class="api apilevel-">
+<table class="jd-inheritance-table">
+
+
+    <tr>
+        
+        <td colspan="2" class="jd-inheritance-class-cell"><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">java.lang.Object</a></td>
+    </tr>
+    
+
+    <tr>
+        
+            <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
+        
+        <td colspan="1" class="jd-inheritance-class-cell">org.sunsystems.ssc.componentexecutor.definition.ObjectFactory</td>
+    </tr>
+    
+
+</table>
+
+
+
+
+
+
+
+<div class="jd-descr">
+
+
+<h2>Class Overview</h2>
+<p>This object contains factory methods for each 
+ Java content interface and Java element interface 
+ generated in the org.sunsystems.ssc.componentexecutor.definition package. 
+ <p>An ObjectFactory allows you to programatically 
+ construct new instances of the Java representation 
+ for XML content. The Java representation of XML 
+ content can consist of schema derived interfaces 
+ and classes representing the binding of schema 
+ type definitions, element declarations and model 
+ groups.  Factory methods for each of these are 
+ provided in this class.
+ 
+</p>
+
+
+
+
+
+</div><!-- jd-descr -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="jd-descr">
+
+
+<h2>Summary</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =========== FIELD SUMMARY =========== -->
+<table id="lfields" class="jd-sumtable"><tr><th colspan="12">Fields</th></tr>
+
+
+    
+      <tr class="alt-color api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          static
+          final
+          QName</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#_LocaleAvailableLocales_QNAME">_LocaleAvailableLocales_QNAME</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          static
+          final
+          QName</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#_LocaleCountry_QNAME">_LocaleCountry_QNAME</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          static
+          final
+          QName</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#_LocaleDefault_QNAME">_LocaleDefault_QNAME</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          static
+          final
+          QName</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#_LocaleDisplayCountry_QNAME">_LocaleDisplayCountry_QNAME</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          static
+          final
+          QName</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#_LocaleDisplayLanguage_QNAME">_LocaleDisplayLanguage_QNAME</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          static
+          final
+          QName</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#_LocaleDisplayName_QNAME">_LocaleDisplayName_QNAME</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          static
+          final
+          QName</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#_LocaleDisplayVariant_QNAME">_LocaleDisplayVariant_QNAME</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          static
+          final
+          QName</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#_LocaleISO3Country_QNAME">_LocaleISO3Country_QNAME</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          static
+          final
+          QName</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#_LocaleISO3Language_QNAME">_LocaleISO3Language_QNAME</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          static
+          final
+          QName</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#_LocaleISOCountries_QNAME">_LocaleISOCountries_QNAME</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          static
+          final
+          QName</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#_LocaleISOLanguages_QNAME">_LocaleISOLanguages_QNAME</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          static
+          final
+          QName</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#_LocaleInstance_QNAME">_LocaleInstance_QNAME</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          static
+          final
+          QName</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#_LocaleLanguage_QNAME">_LocaleLanguage_QNAME</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+      <tr class=" api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          private
+          static
+          final
+          QName</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#_LocaleVariant_QNAME">_LocaleVariant_QNAME</a></td>
+          <td class="jd-descrcol" width="100%"></td>
+      </tr>
+      
+    
+
+</table>
+
+
+
+
+
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<table id="pubctors" class="jd-sumtable"><tr><th colspan="12">Public Constructors</th></tr>
+
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            </nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#ObjectFactory()">ObjectFactory</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: org.sunsystems.ssc.componentexecutor.definition
+ 
+</div>
+  
+  </td></tr>
+
+
+
+</table>
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="pubmethods" class="jd-sumtable"><tr><th colspan="12">Public Methods</th></tr>
+
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ArrayOfString.html">ArrayOfString</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createArrayOfString()">createArrayOfString</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ArrayOfString.html">ArrayOfString</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorComponentsRequest.html">ComponentExecutorComponentsRequest</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createComponentExecutorComponentsRequest()">createComponentExecutorComponentsRequest</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorComponentsRequest.html">ComponentExecutorComponentsRequest</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorComponentsResponse.html">ComponentExecutorComponentsResponse</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createComponentExecutorComponentsResponse()">createComponentExecutorComponentsResponse</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorComponentsResponse.html">ComponentExecutorComponentsResponse</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorExecuteRequest.html">ComponentExecutorExecuteRequest</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createComponentExecutorExecuteRequest()">createComponentExecutorExecuteRequest</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorExecuteRequest.html">ComponentExecutorExecuteRequest</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorExecuteResponse.html">ComponentExecutorExecuteResponse</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createComponentExecutorExecuteResponse()">createComponentExecutorExecuteResponse</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorExecuteResponse.html">ComponentExecutorExecuteResponse</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorInputSchemaRequest.html">ComponentExecutorInputSchemaRequest</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createComponentExecutorInputSchemaRequest()">createComponentExecutorInputSchemaRequest</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorInputSchemaRequest.html">ComponentExecutorInputSchemaRequest</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorInputSchemaResponse.html">ComponentExecutorInputSchemaResponse</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createComponentExecutorInputSchemaResponse()">createComponentExecutorInputSchemaResponse</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorInputSchemaResponse.html">ComponentExecutorInputSchemaResponse</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorMethodsRequest.html">ComponentExecutorMethodsRequest</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createComponentExecutorMethodsRequest()">createComponentExecutorMethodsRequest</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorMethodsRequest.html">ComponentExecutorMethodsRequest</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorMethodsResponse.html">ComponentExecutorMethodsResponse</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createComponentExecutorMethodsResponse()">createComponentExecutorMethodsResponse</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorMethodsResponse.html">ComponentExecutorMethodsResponse</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorOutputSchemaRequest.html">ComponentExecutorOutputSchemaRequest</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createComponentExecutorOutputSchemaRequest()">createComponentExecutorOutputSchemaRequest</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorOutputSchemaRequest.html">ComponentExecutorOutputSchemaRequest</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorOutputSchemaResponse.html">ComponentExecutorOutputSchemaResponse</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createComponentExecutorOutputSchemaResponse()">createComponentExecutorOutputSchemaResponse</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorOutputSchemaResponse.html">ComponentExecutorOutputSchemaResponse</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorStreamExecuteRequest.html">ComponentExecutorStreamExecuteRequest</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createComponentExecutorStreamExecuteRequest()">createComponentExecutorStreamExecuteRequest</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorStreamExecuteRequest.html">ComponentExecutorStreamExecuteRequest</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorStreamExecuteResponse.html">ComponentExecutorStreamExecuteResponse</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createComponentExecutorStreamExecuteResponse()">createComponentExecutorStreamExecuteResponse</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorStreamExecuteResponse.html">ComponentExecutorStreamExecuteResponse</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorUpdateOperatorLogonDateRequest.html">ComponentExecutorUpdateOperatorLogonDateRequest</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createComponentExecutorUpdateOperatorLogonDateRequest()">createComponentExecutorUpdateOperatorLogonDateRequest</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorUpdateOperatorLogonDateRequest.html">ComponentExecutorUpdateOperatorLogonDateRequest</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorUpdateOperatorLogonDateResponse.html">ComponentExecutorUpdateOperatorLogonDateResponse</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createComponentExecutorUpdateOperatorLogonDateResponse()">createComponentExecutorUpdateOperatorLogonDateResponse</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorUpdateOperatorLogonDateResponse.html">ComponentExecutorUpdateOperatorLogonDateResponse</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetConfigurationKeyRequest.html">ComponentExecutorgetConfigurationKeyRequest</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createComponentExecutorgetConfigurationKeyRequest()">createComponentExecutorgetConfigurationKeyRequest</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetConfigurationKeyRequest.html">ComponentExecutorgetConfigurationKeyRequest</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetConfigurationKeyResponse.html">ComponentExecutorgetConfigurationKeyResponse</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createComponentExecutorgetConfigurationKeyResponse()">createComponentExecutorgetConfigurationKeyResponse</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetConfigurationKeyResponse.html">ComponentExecutorgetConfigurationKeyResponse</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetLocaleRequest.html">ComponentExecutorgetLocaleRequest</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createComponentExecutorgetLocaleRequest()">createComponentExecutorgetLocaleRequest</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetLocaleRequest.html">ComponentExecutorgetLocaleRequest</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetLocaleResponse.html">ComponentExecutorgetLocaleResponse</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createComponentExecutorgetLocaleResponse()">createComponentExecutorgetLocaleResponse</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetLocaleResponse.html">ComponentExecutorgetLocaleResponse</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ConfigurationKey.html">ConfigurationKey</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createConfigurationKey()">createConfigurationKey</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ConfigurationKey.html">ConfigurationKey</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ConfigurationType.html">ConfigurationType</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createConfigurationType()">createConfigurationType</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ConfigurationType.html">ConfigurationType</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/Enum.html">Enum</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createEnum()">createEnum</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/Enum.html">Enum</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/IAuthenticationVoucher.html">IAuthenticationVoucher</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createIAuthenticationVoucher()">createIAuthenticationVoucher</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/IAuthenticationVoucher.html">IAuthenticationVoucher</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ILicensingVoucher.html">ILicensingVoucher</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createILicensingVoucher()">createILicensingVoucher</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ILicensingVoucher.html">ILicensingVoucher</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/IMethod.html">IMethod</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createIMethod()">createIMethod</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/IMethod.html">IMethod</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/Locale.html">Locale</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createLocale()">createLocale</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/Locale.html">Locale</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            JAXBElement&lt;<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ArrayOfString.html">ArrayOfString</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createLocaleAvailableLocales(org.sunsystems.ssc.componentexecutor.definition.ArrayOfString)">createLocaleAvailableLocales</a></span>(<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ArrayOfString.html">ArrayOfString</a> value)</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ArrayOfString.html">ArrayOfString</a></code><code>&gt;</code>}
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            JAXBElement&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createLocaleCountry(java.lang.String)">createLocaleCountry</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> value)</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of JAXBElement<code>&lt;</code><code><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></code><code>&gt;</code>}
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            JAXBElement&lt;<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/Locale.html">Locale</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createLocaleDefault(org.sunsystems.ssc.componentexecutor.definition.Locale)">createLocaleDefault</a></span>(<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/Locale.html">Locale</a> value)</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/Locale.html">Locale</a></code><code>&gt;</code>}
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            JAXBElement&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createLocaleDisplayCountry(java.lang.String)">createLocaleDisplayCountry</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> value)</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of JAXBElement<code>&lt;</code><code><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></code><code>&gt;</code>}
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            JAXBElement&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createLocaleDisplayLanguage(java.lang.String)">createLocaleDisplayLanguage</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> value)</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of JAXBElement<code>&lt;</code><code><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></code><code>&gt;</code>}
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            JAXBElement&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createLocaleDisplayName(java.lang.String)">createLocaleDisplayName</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> value)</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of JAXBElement<code>&lt;</code><code><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></code><code>&gt;</code>}
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            JAXBElement&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createLocaleDisplayVariant(java.lang.String)">createLocaleDisplayVariant</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> value)</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of JAXBElement<code>&lt;</code><code><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></code><code>&gt;</code>}
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            JAXBElement&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createLocaleISO3Country(java.lang.String)">createLocaleISO3Country</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> value)</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of JAXBElement<code>&lt;</code><code><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></code><code>&gt;</code>}
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            JAXBElement&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createLocaleISO3Language(java.lang.String)">createLocaleISO3Language</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> value)</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of JAXBElement<code>&lt;</code><code><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></code><code>&gt;</code>}
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            JAXBElement&lt;<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ArrayOfString.html">ArrayOfString</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createLocaleISOCountries(org.sunsystems.ssc.componentexecutor.definition.ArrayOfString)">createLocaleISOCountries</a></span>(<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ArrayOfString.html">ArrayOfString</a> value)</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ArrayOfString.html">ArrayOfString</a></code><code>&gt;</code>}
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            JAXBElement&lt;<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ArrayOfString.html">ArrayOfString</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createLocaleISOLanguages(org.sunsystems.ssc.componentexecutor.definition.ArrayOfString)">createLocaleISOLanguages</a></span>(<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ArrayOfString.html">ArrayOfString</a> value)</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ArrayOfString.html">ArrayOfString</a></code><code>&gt;</code>}
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            JAXBElement&lt;<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/Locale.html">Locale</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createLocaleInstance(org.sunsystems.ssc.componentexecutor.definition.Locale)">createLocaleInstance</a></span>(<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/Locale.html">Locale</a> value)</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/Locale.html">Locale</a></code><code>&gt;</code>}
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            JAXBElement&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createLocaleLanguage(java.lang.String)">createLocaleLanguage</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> value)</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of JAXBElement<code>&lt;</code><code><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></code><code>&gt;</code>}
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            JAXBElement&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createLocaleVariant(java.lang.String)">createLocaleVariant</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> value)</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of JAXBElement<code>&lt;</code><code><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></code><code>&gt;</code>}
+ 
+</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ServerArguments.html">ServerArguments</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../org/sunsystems/ssc/componentexecutor/definition/ObjectFactory.html#createServerArguments()">createServerArguments</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ServerArguments.html">ServerArguments</a></code>
+ 
+</div>
+  
+  </td></tr>
+
+
+
+</table>
+
+
+
+
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="inhmethods" class="jd-sumtable"><tr><th>
+  <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
+  <div style="clear:left;">Inherited Methods</div></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-java.lang.Object" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-java.lang.Object-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From class
+
+  <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">java.lang.Object</a>
+
+<div id="inherited-methods-java.lang.Object">
+  <div id="inherited-methods-java.lang.Object-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-java.lang.Object-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">clone</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            boolean</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">equals</span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">finalize</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">getClass</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            int</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">hashCode</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">notify</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">notifyAll</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">toString</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">wait</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">wait</span>(long arg0, int arg1)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">wait</span>(long arg0)</nobr>
+        
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+</table>
+
+
+</div><!-- jd-descr (summary) -->
+
+<!-- Details -->
+
+
+
+
+
+
+
+
+<!-- XML Attributes -->
+
+
+<!-- Enum Values -->
+
+
+<!-- Constants -->
+
+
+<!-- Fields -->
+
+
+<!-- ========= FIELD DETAIL ======== -->
+<h2>Fields</h2>
+
+
+
+
+<A NAME="_LocaleAvailableLocales_QNAME"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        QName
+      </span>
+        _LocaleAvailableLocales_QNAME
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="_LocaleCountry_QNAME"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        QName
+      </span>
+        _LocaleCountry_QNAME
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="_LocaleDefault_QNAME"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        QName
+      </span>
+        _LocaleDefault_QNAME
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="_LocaleDisplayCountry_QNAME"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        QName
+      </span>
+        _LocaleDisplayCountry_QNAME
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="_LocaleDisplayLanguage_QNAME"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        QName
+      </span>
+        _LocaleDisplayLanguage_QNAME
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="_LocaleDisplayName_QNAME"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        QName
+      </span>
+        _LocaleDisplayName_QNAME
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="_LocaleDisplayVariant_QNAME"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        QName
+      </span>
+        _LocaleDisplayVariant_QNAME
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="_LocaleISO3Country_QNAME"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        QName
+      </span>
+        _LocaleISO3Country_QNAME
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="_LocaleISO3Language_QNAME"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        QName
+      </span>
+        _LocaleISO3Language_QNAME
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="_LocaleISOCountries_QNAME"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        QName
+      </span>
+        _LocaleISOCountries_QNAME
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="_LocaleISOLanguages_QNAME"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        QName
+      </span>
+        _LocaleISOLanguages_QNAME
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="_LocaleInstance_QNAME"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        QName
+      </span>
+        _LocaleInstance_QNAME
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="_LocaleLanguage_QNAME"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        QName
+      </span>
+        _LocaleLanguage_QNAME
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="_LocaleVariant_QNAME"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        QName
+      </span>
+        _LocaleVariant_QNAME
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+    </div>
+</div>
+
+
+
+
+<!-- Public ctors -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<h2>Public Constructors</h2>
+
+
+
+<A NAME="ObjectFactory()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        
+      </span>
+      <span class="sympad">ObjectFactory</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: org.sunsystems.ssc.componentexecutor.definition
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<!-- Protected ctors -->
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+<!-- Public methdos -->
+
+<h2>Public Methods</h2>
+
+
+
+<A NAME="createArrayOfString()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ArrayOfString.html">ArrayOfString</a>
+      </span>
+      <span class="sympad">createArrayOfString</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ArrayOfString.html">ArrayOfString</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createComponentExecutorComponentsRequest()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorComponentsRequest.html">ComponentExecutorComponentsRequest</a>
+      </span>
+      <span class="sympad">createComponentExecutorComponentsRequest</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorComponentsRequest.html">ComponentExecutorComponentsRequest</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createComponentExecutorComponentsResponse()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorComponentsResponse.html">ComponentExecutorComponentsResponse</a>
+      </span>
+      <span class="sympad">createComponentExecutorComponentsResponse</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorComponentsResponse.html">ComponentExecutorComponentsResponse</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createComponentExecutorExecuteRequest()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorExecuteRequest.html">ComponentExecutorExecuteRequest</a>
+      </span>
+      <span class="sympad">createComponentExecutorExecuteRequest</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorExecuteRequest.html">ComponentExecutorExecuteRequest</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createComponentExecutorExecuteResponse()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorExecuteResponse.html">ComponentExecutorExecuteResponse</a>
+      </span>
+      <span class="sympad">createComponentExecutorExecuteResponse</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorExecuteResponse.html">ComponentExecutorExecuteResponse</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createComponentExecutorInputSchemaRequest()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorInputSchemaRequest.html">ComponentExecutorInputSchemaRequest</a>
+      </span>
+      <span class="sympad">createComponentExecutorInputSchemaRequest</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorInputSchemaRequest.html">ComponentExecutorInputSchemaRequest</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createComponentExecutorInputSchemaResponse()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorInputSchemaResponse.html">ComponentExecutorInputSchemaResponse</a>
+      </span>
+      <span class="sympad">createComponentExecutorInputSchemaResponse</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorInputSchemaResponse.html">ComponentExecutorInputSchemaResponse</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createComponentExecutorMethodsRequest()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorMethodsRequest.html">ComponentExecutorMethodsRequest</a>
+      </span>
+      <span class="sympad">createComponentExecutorMethodsRequest</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorMethodsRequest.html">ComponentExecutorMethodsRequest</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createComponentExecutorMethodsResponse()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorMethodsResponse.html">ComponentExecutorMethodsResponse</a>
+      </span>
+      <span class="sympad">createComponentExecutorMethodsResponse</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorMethodsResponse.html">ComponentExecutorMethodsResponse</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createComponentExecutorOutputSchemaRequest()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorOutputSchemaRequest.html">ComponentExecutorOutputSchemaRequest</a>
+      </span>
+      <span class="sympad">createComponentExecutorOutputSchemaRequest</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorOutputSchemaRequest.html">ComponentExecutorOutputSchemaRequest</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createComponentExecutorOutputSchemaResponse()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorOutputSchemaResponse.html">ComponentExecutorOutputSchemaResponse</a>
+      </span>
+      <span class="sympad">createComponentExecutorOutputSchemaResponse</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorOutputSchemaResponse.html">ComponentExecutorOutputSchemaResponse</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createComponentExecutorStreamExecuteRequest()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorStreamExecuteRequest.html">ComponentExecutorStreamExecuteRequest</a>
+      </span>
+      <span class="sympad">createComponentExecutorStreamExecuteRequest</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorStreamExecuteRequest.html">ComponentExecutorStreamExecuteRequest</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createComponentExecutorStreamExecuteResponse()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorStreamExecuteResponse.html">ComponentExecutorStreamExecuteResponse</a>
+      </span>
+      <span class="sympad">createComponentExecutorStreamExecuteResponse</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorStreamExecuteResponse.html">ComponentExecutorStreamExecuteResponse</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createComponentExecutorUpdateOperatorLogonDateRequest()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorUpdateOperatorLogonDateRequest.html">ComponentExecutorUpdateOperatorLogonDateRequest</a>
+      </span>
+      <span class="sympad">createComponentExecutorUpdateOperatorLogonDateRequest</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorUpdateOperatorLogonDateRequest.html">ComponentExecutorUpdateOperatorLogonDateRequest</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createComponentExecutorUpdateOperatorLogonDateResponse()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorUpdateOperatorLogonDateResponse.html">ComponentExecutorUpdateOperatorLogonDateResponse</a>
+      </span>
+      <span class="sympad">createComponentExecutorUpdateOperatorLogonDateResponse</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorUpdateOperatorLogonDateResponse.html">ComponentExecutorUpdateOperatorLogonDateResponse</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createComponentExecutorgetConfigurationKeyRequest()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetConfigurationKeyRequest.html">ComponentExecutorgetConfigurationKeyRequest</a>
+      </span>
+      <span class="sympad">createComponentExecutorgetConfigurationKeyRequest</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetConfigurationKeyRequest.html">ComponentExecutorgetConfigurationKeyRequest</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createComponentExecutorgetConfigurationKeyResponse()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetConfigurationKeyResponse.html">ComponentExecutorgetConfigurationKeyResponse</a>
+      </span>
+      <span class="sympad">createComponentExecutorgetConfigurationKeyResponse</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetConfigurationKeyResponse.html">ComponentExecutorgetConfigurationKeyResponse</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createComponentExecutorgetLocaleRequest()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetLocaleRequest.html">ComponentExecutorgetLocaleRequest</a>
+      </span>
+      <span class="sympad">createComponentExecutorgetLocaleRequest</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetLocaleRequest.html">ComponentExecutorgetLocaleRequest</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createComponentExecutorgetLocaleResponse()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetLocaleResponse.html">ComponentExecutorgetLocaleResponse</a>
+      </span>
+      <span class="sympad">createComponentExecutorgetLocaleResponse</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ComponentExecutorgetLocaleResponse.html">ComponentExecutorgetLocaleResponse</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createConfigurationKey()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ConfigurationKey.html">ConfigurationKey</a>
+      </span>
+      <span class="sympad">createConfigurationKey</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ConfigurationKey.html">ConfigurationKey</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createConfigurationType()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ConfigurationType.html">ConfigurationType</a>
+      </span>
+      <span class="sympad">createConfigurationType</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ConfigurationType.html">ConfigurationType</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createEnum()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/Enum.html">Enum</a>
+      </span>
+      <span class="sympad">createEnum</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/Enum.html">Enum</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createIAuthenticationVoucher()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/IAuthenticationVoucher.html">IAuthenticationVoucher</a>
+      </span>
+      <span class="sympad">createIAuthenticationVoucher</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/IAuthenticationVoucher.html">IAuthenticationVoucher</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createILicensingVoucher()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ILicensingVoucher.html">ILicensingVoucher</a>
+      </span>
+      <span class="sympad">createILicensingVoucher</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ILicensingVoucher.html">ILicensingVoucher</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createIMethod()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/IMethod.html">IMethod</a>
+      </span>
+      <span class="sympad">createIMethod</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/IMethod.html">IMethod</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createLocale()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/Locale.html">Locale</a>
+      </span>
+      <span class="sympad">createLocale</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/Locale.html">Locale</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+<A NAME="createLocaleAvailableLocales(org.sunsystems.ssc.componentexecutor.definition.ArrayOfString)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        JAXBElement&lt;<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ArrayOfString.html">ArrayOfString</a>&gt;
+      </span>
+      <span class="sympad">createLocaleAvailableLocales</span>
+      <span class="normal">(<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ArrayOfString.html">ArrayOfString</a> value)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ArrayOfString.html">ArrayOfString</a></code><code>&gt;</code>}
+ 
+</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>value</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createLocaleCountry(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        JAXBElement&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>&gt;
+      </span>
+      <span class="sympad">createLocaleCountry</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> value)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of JAXBElement<code>&lt;</code><code><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></code><code>&gt;</code>}
+ 
+</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>value</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createLocaleDefault(org.sunsystems.ssc.componentexecutor.definition.Locale)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        JAXBElement&lt;<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/Locale.html">Locale</a>&gt;
+      </span>
+      <span class="sympad">createLocaleDefault</span>
+      <span class="normal">(<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/Locale.html">Locale</a> value)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/Locale.html">Locale</a></code><code>&gt;</code>}
+ 
+</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>value</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createLocaleDisplayCountry(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        JAXBElement&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>&gt;
+      </span>
+      <span class="sympad">createLocaleDisplayCountry</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> value)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of JAXBElement<code>&lt;</code><code><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></code><code>&gt;</code>}
+ 
+</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>value</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createLocaleDisplayLanguage(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        JAXBElement&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>&gt;
+      </span>
+      <span class="sympad">createLocaleDisplayLanguage</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> value)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of JAXBElement<code>&lt;</code><code><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></code><code>&gt;</code>}
+ 
+</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>value</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createLocaleDisplayName(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        JAXBElement&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>&gt;
+      </span>
+      <span class="sympad">createLocaleDisplayName</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> value)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of JAXBElement<code>&lt;</code><code><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></code><code>&gt;</code>}
+ 
+</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>value</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createLocaleDisplayVariant(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        JAXBElement&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>&gt;
+      </span>
+      <span class="sympad">createLocaleDisplayVariant</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> value)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of JAXBElement<code>&lt;</code><code><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></code><code>&gt;</code>}
+ 
+</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>value</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createLocaleISO3Country(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        JAXBElement&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>&gt;
+      </span>
+      <span class="sympad">createLocaleISO3Country</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> value)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of JAXBElement<code>&lt;</code><code><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></code><code>&gt;</code>}
+ 
+</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>value</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createLocaleISO3Language(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        JAXBElement&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>&gt;
+      </span>
+      <span class="sympad">createLocaleISO3Language</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> value)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of JAXBElement<code>&lt;</code><code><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></code><code>&gt;</code>}
+ 
+</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>value</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createLocaleISOCountries(org.sunsystems.ssc.componentexecutor.definition.ArrayOfString)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        JAXBElement&lt;<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ArrayOfString.html">ArrayOfString</a>&gt;
+      </span>
+      <span class="sympad">createLocaleISOCountries</span>
+      <span class="normal">(<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ArrayOfString.html">ArrayOfString</a> value)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ArrayOfString.html">ArrayOfString</a></code><code>&gt;</code>}
+ 
+</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>value</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createLocaleISOLanguages(org.sunsystems.ssc.componentexecutor.definition.ArrayOfString)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        JAXBElement&lt;<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ArrayOfString.html">ArrayOfString</a>&gt;
+      </span>
+      <span class="sympad">createLocaleISOLanguages</span>
+      <span class="normal">(<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ArrayOfString.html">ArrayOfString</a> value)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ArrayOfString.html">ArrayOfString</a></code><code>&gt;</code>}
+ 
+</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>value</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createLocaleInstance(org.sunsystems.ssc.componentexecutor.definition.Locale)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        JAXBElement&lt;<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/Locale.html">Locale</a>&gt;
+      </span>
+      <span class="sympad">createLocaleInstance</span>
+      <span class="normal">(<a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/Locale.html">Locale</a> value)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of JAXBElement<code>&lt;</code><code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/Locale.html">Locale</a></code><code>&gt;</code>}
+ 
+</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>value</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createLocaleLanguage(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        JAXBElement&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>&gt;
+      </span>
+      <span class="sympad">createLocaleLanguage</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> value)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of JAXBElement<code>&lt;</code><code><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></code><code>&gt;</code>}
+ 
+</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>value</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createLocaleVariant(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        JAXBElement&lt;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>&gt;
+      </span>
+      <span class="sympad">createLocaleVariant</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> value)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of JAXBElement<code>&lt;</code><code><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></code><code>&gt;</code>}
+ 
+</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>value</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="createServerArguments()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ServerArguments.html">ServerArguments</a>
+      </span>
+      <span class="sympad">createServerArguments</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Create an instance of <code><a href="../../../../../../java/org/sunsystems/ssc/componentexecutor/definition/ServerArguments.html">ServerArguments</a></code>
+ 
+</p></div>
+
+    </div>
+</div>
+
+
+
+
+
+<!-- ========= METHOD DETAIL ======== -->
+
+
+
+<!-- ========= END OF CLASS DATA ========= -->
+<A NAME="navbar_top"></A>
+
+<div id="footer">
+Generated by <a href="http://www.mulesoft.com/devkit">Mule DevKit</a>. Document generation technology based on <a href="http://code.google.com/p/doclava/">Google's Doclava</a>.
+</div> <!-- end footer -->
+
+</div> <!-- jd-content -->
+
+</div><!-- end doc-content -->
+
+</div> <!-- end body-content --> 
+
+<script type="text/javascript">
+init(); /* initialize mule-developer-docs.js */
+</script>
+
+</body>
+</html>
