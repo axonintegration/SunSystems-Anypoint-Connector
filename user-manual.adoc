@@ -1,0 +1,470 @@
+//= Anypoint Connectors User Guide
+//
+//The following is a proposed connector user guide template for documenting MuleSoft and 3rd party connectors. When completed, a tech writer will work with the development teams to bring existing and new connector documentation to this standard. Please review and add your comments. Thanks!  
+//
+//Note: Horizontal lines show sections, but won't be in the actual documents.
+//
+---
+
+= SunSystems SSC Connector
+Connects to Infor SunSystems through the integration layer provided called SunSystems Connect (SSC).
+
+---
+
+== Contents:
+
+. Introduction
+.. Prerequisites
+.. Requirements
+.. Dependencies
+... Versions
+... Consumers
+
+. Installing & Configuring
+.. Installing
+.. Configuring
+.. Upgrading from a Previous Version
+
+. Using the Connector
+.. Use Cases and Demos
+.. Best Practices
+.. Adding to a Flow
+.. Query Types
+.. Increasing Performance
+
+. Example Use Case
+..  Anypoint™ Studio  Visual Editor | XML Editor
+.. Example Code
+. Demo
+. F.A.Q
+. See Also
+
+---
+
+== Introduction 
+
+Infor SunSystems is a financial management, purchasing, inventory and sales management solution. 
+The SunSystems SSC Anypoint Connector connectors to Infor SunSystems through the integration layer provided called SunSystems Connect (SSC).  
+This connector provides a wrapper around the SSC functionality to enable the utilization of SSC within the Mule environment.  
+
+=== Prerequisites
+
+This document assumes that you are familiar with the basic concepts of Infor SunSystems and have access to a licensed instance of SunSystems Connect.
+You should have access to a SunSystems Connect web service discovery portal through the URL:
+http://<HOST_NAME>:8080/connect/connect.jsp
+
+It also assumes you have a valid user account able to run SSC services and access to a SunSystems environment or the support of a SunSystems administrator to discover what accounts and codes are valid.
+
+=== Requirements
+
+- Infor SunSystems environment (tested on versions 5.2 - 6.4) installed as per SunSystems specification. 
+- Licensed installation of SunSystems SSC Service. SSC is the integration layer made available by SunSystems.  This requires a separate licence to operate that is to be purchased separately and installed on the SunSystems environment.   
+- Access to the SunSystems services from the location of the MuleStudio.  You should be able to open the 
+following URL from a browser in the studio environment: http://<HOST_NAME>:8080/connect/connect.jsp
+
+=== Dependencies
+
+MuleSoft Anypoint Studio or MuleSoft Standalone v3.6.x is required for the connector to work.
+Should you require the connector for a previous version of the MuleSoft environment kindly contact Computime Ltd.
+This connector is compiled using JDK 7.
+
+---
+
+== Installing and Configuring 
+
+=== Installing
+
+The connector distribution is obtainable by contacting Computime Ltd (http://www.computime.com.mt/) 
+Once you are provided with the connector UpdateSite.zip package.  In the Studio navigate to 
+Help > Install New Software > Add > Navigate to the zip file on your local repository and install.
+
+=== Configuring
+
+Configuration of a connection is set through the Global Elements section in the studio.  There you can provide the connection credentials.
+
+=== Updating From an Older Version
+
+This is the first public release of the connector.  Therefore this section is not applicable.
+ 
+---
+
+== Using This Connector
+
+This connector includes a number of outbound operations to be performed on SSC.  
+
+The most important operation is the "Execute" operation. This enables components and methods made available by SSC to be executed.  This operation takes as input:
+
+* Component: What entity in SunSystems is to be used in this operation
+* Method: What method of the selected component is to be executed (typically these would be Query or Update operations, but others may be component specific - e.g. Component Journal, Method Import ).
+* Group: The SunSystems Business Unit Code (BUC) to be selected for this operation.  If left blank the BUC is to be supplied in the XML payload.
+* Timeout: How many milliseconds before throwing a timeout exception.  If left blank than the connector thread will keep on waiting until process is completed.
+
+The message payload expected by this operation is an XML formatted SSC Payload.  The structure of this payload is discoverable either through the "Get Input Schema" operation listed below, or through the SunSystems SSC Portal. 
+The portal will display a list of components available and the different methods. After selecting the method and component, a form is displayed enabling the user to populate the fields required and view the resulting payload.  
+The XML payload to be set in the Mule message prior to running an "Execute" outbound operation should follow the same XML structure.
+
+Other operations include:
+
+* Components list: Returns a list of components made available by this version of SSC.
+* Methods list: Returns a list of methods made available for a selected component by this version of SSC.
+* Get Input Schema: Returns an XML schema expected as input by the selected component and method in this version of SSC.
+* Get Output Schema: Returns an XML schema expected as output from the selected component and method in this version of SSC.
+
+=== Use Cases and Demos
+
+* Query Analysis Codes
+
+** Component: AnalysisCodes
+** Method: Query
+** Payload: PK1 Business Unit Code, dimension equal to 12 and last updated after 01-01-2015
+
+[source,xml]
+Example Payload:
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<SSC>
+	<ErrorContext>
+		<CompatibilityMode>0</CompatibilityMode>
+		<ErrorOutput>2</ErrorOutput>
+		<ErrorThreshold>1</ErrorThreshold>
+	</ErrorContext>
+	<User/>
+	<SunSystemsContext>
+		<BusinessUnit>PK1</BusinessUnit>
+	</SunSystemsContext>
+	<Payload>
+		<Filter>
+			<Expr operator="AND">
+				<Item name="/AnalysisCodes/AnalysisDimensionId" operator="EQU" value="12"/>
+				<Item name="/AnalysisCodes/DateTimeLastUpdated" operator="GT" value="010120150000"/>
+			</Expr>
+		</Filter>
+		<Select>
+			<AnalysisCodes>
+				<AnalysisCode/>
+				<Name/>
+				<Status/>
+				<DateTimeLastUpdated/>
+			</AnalysisCodes>
+		</Select>
+	</Payload>
+</SSC>
+----
+
+The above XML should be injected into the Mule Payload prior to executing the operation below:
+
+[source,xml]
+----
+<sun-systems-ssc:execute  config-ref="SunSystemsSSC" component="AnalysisCodes" group="PK1" method="Query" doc:name="Query Analysis Codes"/>
+----
+
+* Amend Supplier Information
+
+** Component: Supplier
+** Method: CreateOrAmend
+ 
+[source,xml]
+Example Payload:
+----
+<?xml version='1.0' encoding='UTF-8' ?>
+<SSC>
+    <ErrorContext>
+        <CompatibilityMode>1</CompatibilityMode>
+        <ErrorOutput>3</ErrorOutput>
+        <ErrorThreshold>0</ErrorThreshold>
+    </ErrorContext>
+    <SunSystemsContext>
+        <BusinessUnit>PK1</BusinessUnit>
+    </SunSystemsContext>
+    <Payload>
+        <Supplier>
+            <AccountCode>123ABC</AccountCode>
+            <LookupCode>ABC Ltd</LookupCode>
+            <Description>ABC Ltd</Description>
+            <SupplierName>ABC Ltd</SupplierName>
+            <Carrier>0</Carrier>
+            <Comment>Anypoint Connector Testing Supplier</Comment>
+            <DaysToleranceOverride>0</DaysToleranceOverride>
+            <DirectDebit>0</DirectDebit>
+            <EMailAddress>abc@gmail.com</EMailAddress>
+            <PaymentMethod>0</PaymentMethod>
+            <Status>0</Status>
+            <SupplierCode>123ABC</SupplierCode>
+            <Accounts>
+                <AccountCode>123ABC</AccountCode>
+                <LookupCode>ABC Ltd</LookupCode>
+            	<Description>ABC Ltd</Description>
+            	<AccountType>1</AccountType>
+                <AccountingLinksAllowed>0</AccountingLinksAllowed>
+                <AllocationInProgress>0</AllocationInProgress>
+                <BalanceType>0</BalanceType>
+            </Accounts>
+        </Supplier>
+    </Payload>
+</SSC>
+----
+
+The above XML should be injected into the Mule Payload prior to executing the operation below:
+
+[source,xml]
+----
+<sun-systems-ssc:execute  config-ref="SunSystemsSSC" component="Supplier" group="PK1" method="CreateOrAmend" doc:name="CreateOrAmend Supplier"/>
+----
+
+* Journal Import
+
+** Component: Journal
+** Method: Import
+** Payload: Please note this payload is generated over the PK1 demo setup provided by SunSystems. If your setup differs you will need to change the SSC payload to match the current SunSystems setup and using valid accounts.
+ 
+[source,xml]
+Example Payload: 
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<SSC xmlns:max="http://www.ibm.com/maximo" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ErrorContext>
+		<CompatibilityMode>0</CompatibilityMode>
+		<ErrorOutput>0</ErrorOutput>
+		<ErrorThreshold>1</ErrorThreshold>
+	</ErrorContext>
+	<SunSystemsContext>
+		<BusinessUnit>PK1</BusinessUnit>
+		<BudgetCode>A</BudgetCode>
+	</SunSystemsContext>
+	<MethodContext>
+		<LedgerPostingParameters>
+			<AllowBalTran>Y</AllowBalTran>
+			<PostingType>2</PostingType>
+		</LedgerPostingParameters>
+	</MethodContext>
+	<Payload>
+		<Ledger>
+			<Line>
+				<AccountCode>000</AccountCode>
+				<TransactionReference>1049</TransactionReference>
+				<TransactionDate>28012005</TransactionDate>
+				<Description>PAYMENTS</Description>
+				<BaseAmount/>
+				<CurrencyCode>USD</CurrencyCode>
+				<Base2ReportingRate>1.0</Base2ReportingRate>
+				<TransactionAmount>817.32</TransactionAmount>
+				<DebitCredit>D</DebitCredit>
+				<AllocationCode/>
+				<JournalType>PIMIS</JournalType>
+				<JournalSource>MAX</JournalSource>
+				<AnalysisCode2>43</AnalysisCode2>
+				<AnalysisCode3>#</AnalysisCode3>
+				<AnalysisCode6>#</AnalysisCode6>
+			</Line>
+			<Line>
+				<AccountCode>000</AccountCode>
+				<TransactionReference>1049</TransactionReference>
+				<TransactionDate>28012005</TransactionDate>
+				<Description>PAYMENTS</Description>
+				<BaseAmount/>
+				<CurrencyCode>USD</CurrencyCode>
+				<Base2ReportingRate>1.0</Base2ReportingRate>
+				<TransactionAmount>817.32</TransactionAmount>
+				<DebitCredit>C</DebitCredit>
+				<AllocationCode/>
+				<JournalType>PIMIS</JournalType>
+				<JournalSource>MAX</JournalSource>
+				<AnalysisCode2>43</AnalysisCode2>
+				<AnalysisCode3>#</AnalysisCode3>
+				<AnalysisCode6>#</AnalysisCode6>
+			</Line>
+		</Ledger>
+	</Payload>
+</SSC>
+----
+
+The above XML should be injected into the Mule Payload prior to executing the operation below:
+
+[source,xml]
+----
+<sun-systems-ssc:execute  config-ref="SunSystemsSSC" component="Journal" group="PK1" method="Import" doc:name="Journal Import"/>
+----
+
+=== Best Practices
+When interfacing transactional data great care should be taken to avoid running the same transaction twice - resulting in a double posting.  
+Should there be a connection failure due to a timeout, the posting shouldn't be simply retried.  There may be cases where the connection times out as the posting blocks waiting for some lock on the journal.
+This typically means that some other long running posting on the journal is running.  In journal postings the following timeout execption strategy is recommended:
+
+* Save batch of transaction is some intermediary state (through some marker or saving to an external file).
+* Either: Execute an outbound journal query for postings in intermediary states using the transaction or link reference to identify whether posting has been affected.  If posting is located than pending postings can be removed from the intermediary state and interface can proceed.
+* Or: Send a notification of an SunSystems administrator to make sure the posting has not been affected and instructions on how to trigger the resubmit of the posting (e.g. through an HTTP link)   
+  
+=== Adding to a Flow
+Search for the term 'SunSystems' on the side 'connectors' menu of the studio designer and drag the connector icon into your studio flow.  
+
+=== Query Types
+Most components support a Query method that takes as input an SSC payload that includes a filter.
+For information on the SSC filter structure check out the Online documentation accessible from your SSC installation
+SSC Technical Reference > Payload Reference Guide > Query Input Payloads
+		
+=== Increasing Performance
+When running an outbound Execute operation (especially a Journal Import) care should be taken when processing large batches.
+Experience with SSC shows that running large batch of postings (e.g. 10000) will take longer than running multiple smaller batches of postings (e.g. 10 batches of 1000 postings each).  This also provides a more manageable response should any errors occur.
+Different batches of postings will have different journal numbers.  Unless requirements stipulate that a batch is to be processed as a single journal number, smaller batches should be preferred.
+
+SSC connections require obtaining an authentication token prior to executing a method.  The connection configuration of the connector obtains this authentication token which is then shared across execution instances.
+A pool of authentication tokens can be generated through the connector's connection pooling mechanisms.  If the authentication token expires a new one is automatically retrieved such that (unless there is a connection failure) this is transparent to the user.
+This authentication token sharing improves performance as each "Execute" operation requires a single web service call, rather than two.
+
+With the SunSystems environment settings are available for scaling resources.  
+
+* In the SunSystems environment run the "Property Editor" (PPE).
+* Navigate to sunsystems > sasi
+* Change any properties, most importantly the 'num_concurrent_transactions'.
+
+---
+
+== Example Use Case
+Receive a file entry with supplier information update from an external system (e.g. CRM system).  
+Run a supplier amended operation in SunSystems with the new information.
+
+Example file received:
+[source,xml]
+----
+<Suppliers>
+	<Supplier>
+		<Code>123ABC</Code>
+		<Name>ABC Ltd</Name>
+		<Email>abc@gmail.com</Email>
+		<PaymentMethod>Cheque</PaymentMethod>
+	</Supplier>
+	<Supplier>
+		<Code>234BCD</Code>
+		<Name>BCD Ltd</Name>
+		<Email>bcd@gmail.com</Email>
+		<PaymentMethod>Direct Debit</PaymentMethod>
+	</Supplier>
+	<Supplier>
+		<Code>345CDE</Code>
+		<Name>CDE Ltd</Name>
+		<Email>cde@gmail.com</Email>
+	</Supplier>
+</Suppliers>
+----
+
+===  Anypoint Studio  Visual Editor | XML Editor
+1. Suppliers XML is to be exported from the external system and placed in a folder accessible by the Mule flow (e.g. src/main/resources/suppliers).
+
+2. Flow starts with a file inbound-endpoint which polls the folder (e.g. every 10 seconds) and captures any files called 'Suppliers.xml'.
+
+3. File transformed from an input stream to a string (through the object-to-string-transformer).
+
+4. Payload transformed fom the input XML format to the SSC Payload expected by SunSystems through an XML Stylesheet.
+
+[source,xml]
+Suppliers.xsl: 
+----
+<xsl:transform version="2.0" xmlns:max="http://www.ibm.com/maximo"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	<xsl:template match="/">
+		<SSC>
+			<ErrorContext>
+				<CompatibilityMode>1</CompatibilityMode>
+				<ErrorOutput>3</ErrorOutput>
+				<ErrorThreshold>0</ErrorThreshold>
+			</ErrorContext>
+			<SunSystemsContext>
+				<BusinessUnit>PK1</BusinessUnit>
+			</SunSystemsContext>
+			<Payload>
+				<xsl:for-each select="Suppliers/Supplier">
+					<Supplier>
+						<AccountCode>
+							<xsl:value-of select="Code" />
+						</AccountCode>
+						<SupplierCode>
+							<xsl:value-of select="Code" />
+						</SupplierCode>
+						<LookupCode>
+							<xsl:value-of select="Name" />
+						</LookupCode>
+						<Description>
+							<xsl:value-of select="Name" />
+						</Description>
+						<SupplierName>
+							<xsl:value-of select="Name" />
+						</SupplierName>
+						<Carrier>0</Carrier>
+						<Comment>Anypoint Connector Testing Supplier</Comment>
+						<DaysToleranceOverride>0</DaysToleranceOverride>
+						<DirectDebit>0</DirectDebit>
+						<EMailAddress>
+							<xsl:value-of select="Email" />
+						</EMailAddress>
+						<PaymentMethod>
+							<xsl:choose>
+								<xsl:when test="PaymentMethod = 'Cheque'">0</xsl:when>
+								<xsl:when test="PaymentMethod = 'Direct Debit'">1</xsl:when>
+								<xsl:otherwise>99</xsl:otherwise>
+							</xsl:choose>
+						</PaymentMethod>
+						<Status>0</Status>
+						<Accounts>
+							<AccountCode>
+								<xsl:value-of select="Code" />
+							</AccountCode>
+							<LookupCode>
+								<xsl:value-of select="Name" />
+							</LookupCode>
+							<Description>
+								<xsl:value-of select="Name" />
+							</Description>
+							<AccountType>1</AccountType>
+							<AccountingLinksAllowed>0</AccountingLinksAllowed>
+							<AllocationInProgress>0</AllocationInProgress>
+							<BalanceType>0</BalanceType>
+						</Accounts>
+					</Supplier>
+				</xsl:for-each>
+			</Payload>
+		</SSC>
+	</xsl:template>
+</xsl:transform>
+----
+
+4. SunSystems connector called to execute a Suppliers CreateAmend method with the transformed SSC Payload.
+
+=== Code Example
+
+[source,xml]
+----
+<flow name="sunSystems_suppliersAmend">
+        <file:inbound-endpoint path="suppliers" moveToPattern="#[message.inboundProperties['originalFilename']]" moveToDirectory="C:\Development\AnypointStudio\workspace\connectors-demo\suppliers\archive" connector-ref="File" pollingFrequency="10000" responseTimeout="10000" doc:name="input">
+            <file:filename-regex-filter pattern="Suppliers.xml" caseSensitive="true"/>
+        </file:inbound-endpoint>
+        <object-to-string-transformer doc:name="Object to String"/>
+        <logger message="#[payload.toString()]" level="INFO" doc:name="Logger"/>
+        <mulexml:xslt-transformer xsl-file="Suppliers.xsl" maxIdleTransformers="2" maxActiveTransformers="5" doc:name="XSLT"/>
+        <logger message="#[payload.toString()]" level="INFO" doc:name="Logger"/>
+        <sun-systems-ssc:execute  config-ref="SunSystemsSSC" component="Supplier" group="PK1" method="CreateOrAmend" doc:name="CreateOrAmend Supplier"/>
+        <logger message="#[payload]" level="INFO" doc:name="Logger"/>
+</flow>
+----
+
+---
+=== F.A.Q
+
+. When should I use the checkForError option?
+Unless there is some connection or login error, the SSC service does not thrown an exception.  Instead it encodes the error information within the response.  If this property is set to 'true' it will instruct the Devkit connector to analyse the SSC response and if it detects an error in the response it will throw an exception with the SSC error message.  Should the error message be a posting failure the exception message will include an HTML table representing the posting errors.  Any entries which failed due to journal posting in other lines would not be included in the error message.  The original SSC posting response is also included in the exception object.
+IMP: The checkForError should always be set to false during Hard Journal Posting includes multiple journal types: Different journal types get validated separately in postings.  Therefore the connector may return an exception but the SSC posting would have been partially completed.  In such cases it is suggested to first validate the posting with the 'checkForError' set to true and only if the posting is completely validated.
+ 
+. When should I use the errorsAsHtmlTable option?
+This option should only be selected when the checkForError option is also enabled.  When enabled and an Execute outbound operation throws a data validation exception, this option will transform the entries in the list of validation errors in the SSC payload into an HTML table to facilitate rendering on your application.
+If this false, than validation errors will be returned as an XML message.  
+
+. Some Journal Postings have failed whilst other succeeded.  
+In a Journal Import operation, different Journal Types are posted separately.  For example when posting invoices, different journal types could probably used for invoices and credit notes.
+If there is a validation error in a single invoice in the batch, then all invoices would fail but credit notes would still succeed as they have a different journal type.
+To enforce a complete batch fail/succeed policy, then either split the journal posting into two separate batches, or first run the posting using the method 'ValidateOnly' and only if the response marks all as validated should you run the 'Import' method.   
+IMP: In this scenario the 'checkForError' marker should not be set.
+
+This section will be improved in upcoming versions and we start receiving questions.  Please contact Computime Ltd with any questions (info@computime.com.mt) and a ticket will be raised on our helpdesk system. 
+
+=== See Also
+SSC Technical Reference available in the documentation section of your installation
