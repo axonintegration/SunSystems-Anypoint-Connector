@@ -65,7 +65,7 @@ following URL from a browser in the studio environment: http://<HOST_NAME>:8080/
 === Dependencies
 
 MuleSoft Anypoint Studio or MuleSoft Standalone v3.6.x is required for the connector to work.
-Should you require the connector for a previous version of the MuleSoft environment kindly contact Computime Ltd.
+Should you require the connector for a previous version of the MuleSoft environment kindly contact Computime Software.
 This connector is compiled using JDK 7.
 
 ---
@@ -74,7 +74,7 @@ This connector is compiled using JDK 7.
 
 === Installing
 
-The connector distribution is obtainable by contacting Computime Ltd (http://www.computime.com.mt/) 
+The connector distribution is obtainable by contacting Computime Software (http://www.computimesoftware.com) 
 Once you are provided with the connector UpdateSite.zip package.  In the Studio navigate to 
 Help > Install New Software > Add > Navigate to the zip file on your local repository and install.
 
@@ -464,7 +464,7 @@ If there is a validation error in a single invoice in the batch, then all invoic
 To enforce a complete batch fail/succeed policy, then either split the journal posting into two separate batches, or first run the posting using the method 'ValidateOnly' and only if the response marks all as validated should you run the 'Import' method.   
 IMP: In this scenario the 'checkForError' marker should not be set.
 
-This section will be improved in upcoming versions and we start receiving questions.  Please contact Computime Ltd with any questions (info@computime.com.mt) and a ticket will be raised on our helpdesk system. 
+This section will be improved in upcoming versions and we start receiving questions.  Please contact Computime Software with any questions (info@computimesoftware.com) and a ticket will be raised on our helpdesk system. 
 
 === See Also
 SSC Technical Reference available in the documentation section of your installation
